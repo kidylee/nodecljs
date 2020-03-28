@@ -1,7 +1,7 @@
 FROM alpine:latest as openjdk8
 USER root
 
-RUN apk --update add openjdk8 nodejs ca-certificates bash && \
+RUN apk --update add openjdk8 nodejs npm ca-certificates bash && \
     wget -q "https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein" \
          -O /usr/local/bin/lein && \
     chmod 0755 /usr/local/bin/lein && \
